@@ -1,0 +1,37 @@
+[3.333s] Invoking command in '/home/sanjai/Documents/First_Robot/ros2_ws/src/rover_lidar': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_lidar build --build-base /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build install --record /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/install.log --single-version-externally-managed install_data
+[3.887s] running egg_info
+[3.887s] creating ../../build/rover_lidar/rover_lidar.egg-info
+[3.924s] writing ../../build/rover_lidar/rover_lidar.egg-info/PKG-INFO
+[3.926s] writing dependency_links to ../../build/rover_lidar/rover_lidar.egg-info/dependency_links.txt
+[3.926s] writing entry points to ../../build/rover_lidar/rover_lidar.egg-info/entry_points.txt
+[3.926s] writing requirements to ../../build/rover_lidar/rover_lidar.egg-info/requires.txt
+[3.926s] writing top-level names to ../../build/rover_lidar/rover_lidar.egg-info/top_level.txt
+[3.927s] writing manifest file '../../build/rover_lidar/rover_lidar.egg-info/SOURCES.txt'
+[4.007s] reading manifest file '../../build/rover_lidar/rover_lidar.egg-info/SOURCES.txt'
+[4.008s] writing manifest file '../../build/rover_lidar/rover_lidar.egg-info/SOURCES.txt'
+[4.009s] running build
+[4.009s] running build_py
+[4.009s] creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build
+[4.010s] creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build/lib
+[4.010s] creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build/lib/rover_lidar
+[4.010s] copying rover_lidar/lidar_node.py -> /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build/lib/rover_lidar
+[4.010s] copying rover_lidar/__init__.py -> /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build/lib/rover_lidar
+[4.011s] running install
+[4.021s] running install_lib
+[4.056s] creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/python3.12/site-packages/rover_lidar
+[4.057s] copying /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build/lib/rover_lidar/lidar_node.py -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/python3.12/site-packages/rover_lidar
+[4.057s] copying /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build/lib/rover_lidar/__init__.py -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/python3.12/site-packages/rover_lidar
+[4.058s] byte-compiling /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/python3.12/site-packages/rover_lidar/lidar_node.py to lidar_node.cpython-312.pyc
+[4.059s] byte-compiling /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/python3.12/site-packages/rover_lidar/__init__.py to __init__.cpython-312.pyc
+[4.059s] running install_data
+[4.059s] creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/share/ament_index
+[4.060s] creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/share/ament_index/resource_index
+[4.060s] creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/share/ament_index/resource_index/packages
+[4.060s] copying resource/rover_lidar -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/share/ament_index/resource_index/packages
+[4.061s] copying package.xml -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/share/rover_lidar
+[4.061s] running install_egg_info
+[4.100s] Copying ../../build/rover_lidar/rover_lidar.egg-info to /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/python3.12/site-packages/rover_lidar-0.0.0-py3.12.egg-info
+[4.102s] running install_scripts
+[4.343s] Installing lidar_node script to /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/rover_lidar
+[4.344s] writing list of installed files to '/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/install.log'
+[4.396s] Invoked command in '/home/sanjai/Documents/First_Robot/ros2_ws/src/rover_lidar' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/ros2_ws/install/rover_lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_lidar build --build-base /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/build install --record /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_lidar/install.log --single-version-externally-managed install_data

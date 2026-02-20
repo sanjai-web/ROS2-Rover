@@ -1,0 +1,38 @@
+[1.479s] Invoking command in '/home/sanjai/Documents/First_Robot/ros2_ws/src/rover_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/install/rover_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/rover_description build --build-base /home/sanjai/Documents/First_Robot/build/rover_description/build install --record /home/sanjai/Documents/First_Robot/build/rover_description/install.log --single-version-externally-managed install_data
+[1.939s] running egg_info
+[1.940s] creating ../../../build/rover_description/rover_description.egg-info
+[1.974s] writing ../../../build/rover_description/rover_description.egg-info/PKG-INFO
+[1.974s] writing dependency_links to ../../../build/rover_description/rover_description.egg-info/dependency_links.txt
+[1.975s] writing requirements to ../../../build/rover_description/rover_description.egg-info/requires.txt
+[1.975s] writing top-level names to ../../../build/rover_description/rover_description.egg-info/top_level.txt
+[1.975s] writing manifest file '../../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+[2.050s] reading manifest file '../../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+[2.051s] writing manifest file '../../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+[2.051s] running build
+[2.052s] running build_py
+[2.052s] creating /home/sanjai/Documents/First_Robot/build/rover_description/build
+[2.052s] creating /home/sanjai/Documents/First_Robot/build/rover_description/build/lib
+[2.052s] creating /home/sanjai/Documents/First_Robot/build/rover_description/build/lib/rover_description
+[2.053s] copying rover_description/__init__.py -> /home/sanjai/Documents/First_Robot/build/rover_description/build/lib/rover_description
+[2.053s] running install
+[2.062s] running install_lib
+[2.095s] creating /home/sanjai/Documents/First_Robot/install/rover_description/lib/python3.12/site-packages/rover_description
+[2.096s] copying /home/sanjai/Documents/First_Robot/build/rover_description/build/lib/rover_description/__init__.py -> /home/sanjai/Documents/First_Robot/install/rover_description/lib/python3.12/site-packages/rover_description
+[2.096s] byte-compiling /home/sanjai/Documents/First_Robot/install/rover_description/lib/python3.12/site-packages/rover_description/__init__.py to __init__.cpython-312.pyc
+[2.097s] running install_data
+[2.097s] creating /home/sanjai/Documents/First_Robot/install/rover_description/share/ament_index
+[2.097s] creating /home/sanjai/Documents/First_Robot/install/rover_description/share/ament_index/resource_index
+[2.098s] creating /home/sanjai/Documents/First_Robot/install/rover_description/share/ament_index/resource_index/packages
+[2.098s] copying resource/rover_description -> /home/sanjai/Documents/First_Robot/install/rover_description/share/ament_index/resource_index/packages
+[2.098s] copying package.xml -> /home/sanjai/Documents/First_Robot/install/rover_description/share/rover_description
+[2.098s] creating /home/sanjai/Documents/First_Robot/install/rover_description/share/rover_description/launch
+[2.098s] copying launch/display.launch.py -> /home/sanjai/Documents/First_Robot/install/rover_description/share/rover_description/launch
+[2.098s] creating /home/sanjai/Documents/First_Robot/install/rover_description/share/rover_description/urdf
+[2.099s] copying urdf/rover.urdf -> /home/sanjai/Documents/First_Robot/install/rover_description/share/rover_description/urdf
+[2.099s] creating /home/sanjai/Documents/First_Robot/install/rover_description/share/rover_description/rviz
+[2.099s] copying rviz/default.rviz -> /home/sanjai/Documents/First_Robot/install/rover_description/share/rover_description/rviz
+[2.099s] running install_egg_info
+[2.139s] Copying ../../../build/rover_description/rover_description.egg-info to /home/sanjai/Documents/First_Robot/install/rover_description/lib/python3.12/site-packages/rover_description-0.0.0-py3.12.egg-info
+[2.141s] running install_scripts
+[2.370s] writing list of installed files to '/home/sanjai/Documents/First_Robot/build/rover_description/install.log'
+[2.409s] Invoked command in '/home/sanjai/Documents/First_Robot/ros2_ws/src/rover_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/install/rover_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/rover_description build --build-base /home/sanjai/Documents/First_Robot/build/rover_description/build install --record /home/sanjai/Documents/First_Robot/build/rover_description/install.log --single-version-externally-managed install_data

@@ -1,0 +1,37 @@
+[3.365s] Invoking command in '/home/sanjai/Documents/First_Robot/ros2_ws/src/rover_telemetry': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_telemetry build --build-base /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build install --record /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/install.log --single-version-externally-managed install_data
+[3.821s] running egg_info
+[3.821s] creating ../../build/rover_telemetry/rover_telemetry.egg-info
+[3.857s] writing ../../build/rover_telemetry/rover_telemetry.egg-info/PKG-INFO
+[3.857s] writing dependency_links to ../../build/rover_telemetry/rover_telemetry.egg-info/dependency_links.txt
+[3.858s] writing entry points to ../../build/rover_telemetry/rover_telemetry.egg-info/entry_points.txt
+[3.858s] writing requirements to ../../build/rover_telemetry/rover_telemetry.egg-info/requires.txt
+[3.858s] writing top-level names to ../../build/rover_telemetry/rover_telemetry.egg-info/top_level.txt
+[3.859s] writing manifest file '../../build/rover_telemetry/rover_telemetry.egg-info/SOURCES.txt'
+[3.960s] reading manifest file '../../build/rover_telemetry/rover_telemetry.egg-info/SOURCES.txt'
+[3.961s] writing manifest file '../../build/rover_telemetry/rover_telemetry.egg-info/SOURCES.txt'
+[3.961s] running build
+[3.961s] running build_py
+[3.962s] creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build
+[3.962s] creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build/lib
+[3.962s] creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build/lib/rover_telemetry
+[3.963s] copying rover_telemetry/telemetry_node.py -> /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build/lib/rover_telemetry
+[3.963s] copying rover_telemetry/__init__.py -> /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build/lib/rover_telemetry
+[3.963s] running install
+[3.974s] running install_lib
+[4.015s] creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/python3.12/site-packages/rover_telemetry
+[4.015s] copying /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build/lib/rover_telemetry/telemetry_node.py -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/python3.12/site-packages/rover_telemetry
+[4.015s] copying /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build/lib/rover_telemetry/__init__.py -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/python3.12/site-packages/rover_telemetry
+[4.016s] byte-compiling /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/python3.12/site-packages/rover_telemetry/telemetry_node.py to telemetry_node.cpython-312.pyc
+[4.017s] byte-compiling /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/python3.12/site-packages/rover_telemetry/__init__.py to __init__.cpython-312.pyc
+[4.017s] running install_data
+[4.017s] creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/share/ament_index
+[4.018s] creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/share/ament_index/resource_index
+[4.018s] creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/share/ament_index/resource_index/packages
+[4.018s] copying resource/rover_telemetry -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/share/ament_index/resource_index/packages
+[4.018s] copying package.xml -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/share/rover_telemetry
+[4.019s] running install_egg_info
+[4.058s] Copying ../../build/rover_telemetry/rover_telemetry.egg-info to /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/python3.12/site-packages/rover_telemetry-0.0.0-py3.12.egg-info
+[4.059s] running install_scripts
+[4.303s] Installing telemetry_node script to /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/rover_telemetry
+[4.304s] writing list of installed files to '/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/install.log'
+[4.356s] Invoked command in '/home/sanjai/Documents/First_Robot/ros2_ws/src/rover_telemetry' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/ros2_ws/install/rover_telemetry/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_telemetry build --build-base /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/build install --record /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_telemetry/install.log --single-version-externally-managed install_data

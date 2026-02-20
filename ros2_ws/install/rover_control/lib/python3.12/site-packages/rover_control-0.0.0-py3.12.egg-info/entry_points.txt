@@ -1,0 +1,2 @@
+[console_scripts]
+main_brain = rover_control.main_brain:main

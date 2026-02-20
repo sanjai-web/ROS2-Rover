@@ -1,0 +1,2 @@
+[console_scripts]
+camera_node = rover_camera.camera_node:main

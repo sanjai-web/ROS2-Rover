@@ -1,0 +1,2 @@
+[console_scripts]
+lidar_node = rover_lidar.lidar_node:main

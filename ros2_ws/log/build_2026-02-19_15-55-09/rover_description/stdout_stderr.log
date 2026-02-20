@@ -1,0 +1,28 @@
+running egg_info
+creating ../../build/rover_description/rover_description.egg-info
+writing ../../build/rover_description/rover_description.egg-info/PKG-INFO
+writing dependency_links to ../../build/rover_description/rover_description.egg-info/dependency_links.txt
+writing requirements to ../../build/rover_description/rover_description.egg-info/requires.txt
+writing top-level names to ../../build/rover_description/rover_description.egg-info/top_level.txt
+writing manifest file '../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+reading manifest file '../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+writing manifest file '../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/build
+creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/build/lib
+creating /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/build/lib/rover_description
+copying rover_description/__init__.py -> /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/build/lib/rover_description
+running install
+running install_lib
+creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/lib/python3.12/site-packages/rover_description
+copying /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/build/lib/rover_description/__init__.py -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/lib/python3.12/site-packages/rover_description
+byte-compiling /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/lib/python3.12/site-packages/rover_description/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/share
+creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/share/ament_index
+creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/share/ament_index/resource_index
+creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/share/ament_index/resource_index/packages
+copying resource/rover_description -> /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/share/ament_index/resource_index/packages
+creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/share/rover_description
+error: can't copy 'package.xml': doesn't exist or not a regular file
