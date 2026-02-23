@@ -1,24 +1,29 @@
 # 🤖 4-Wheeled Rover — ROS2 Project
 
-A modular ROS2 (Jazzy) project for a 4-wheeled rover built on a **Raspberry Pi 5**, featuring sensor simulation nodes, a master brain aggregator, URDF visualization, and Gazebo plugin support.
+A modular ROS2 (Jazzy) project for a 4-wheeled rover built on a **Raspberry Pi 5**. Features native ROS2 core navigation, a master brain aggregator, real-time URDF visualization, and a fully functional autonomous exploration simulation inside **Gazebo Harmonic**.
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 ros2_ws/
 ├── src/
+│   ├── rover_sim/              # Gazebo Harmonic Simulation, Navigation, SLAM & Mapping
+│   │   ├── config/             # Nav2, SLAM Toolbox & ROS-GZ Bridge configs
+│   │   ├── launch/             # Top-level autonomous simulation launches
+│   │   ├── rover_sim/          # Python algorithms (Frontier Explorer)
+│   │   ├── rviz/               # Pre-configured RViz profiles
+│   │   └── worlds/             # Gazebo Harmonic 3D environments
 │   ├── rover_gps/              # GPS sensor node
 │   ├── rover_lidar/            # LiDAR sensor node
 │   ├── rover_camera/           # Camera sensor node
 │   ├── rover_telemetry/        # Battery & Temperature node
 │   ├── rover_base/             # Motor controller (cmd_vel subscriber)
-│   ├── rover_control/          # Master brain aggregator + system launch
-│   └── rover_description/      # URDF model + RViz visualization
-│       ├── urdf/rover.urdf
-│       ├── launch/display.launch.py
-│       └── rviz/default.rviz
+│   ├── rover_control/          # Master brain aggregator
+│   └── rover_description/      # URDF models + RViz visualization
+│       ├── urdf/rover.urdf     # Physical URDF
+│       └── urdf/rover_gz.urdf  # Simulation URDF (Gazebo Harmonic Plugins)
 └── Readme.md
 ```
 
@@ -26,157 +31,76 @@ ros2_ws/
 
 ## 🧩 Packages & Features
 
-| Package | Node | Topic | Description |
-|---|---|---|---|
-| `rover_gps` | `gps_node` | `/rover/gps/fix` | Publishes `NavSatFix` at 1 Hz |
-| `rover_lidar` | `lidar_node` | `/rover/lidar/scan` | Publishes `LaserScan` (180 pts) at 5 Hz |
-| `rover_camera` | `camera_node` | `/rover/camera/image_raw` | Publishes `Image` frames at 10 Hz |
-| `rover_telemetry` | `telemetry_node` | `/rover/battery`, `/rover/temperature` | Publishes battery & temperature at 1 Hz |
-| `rover_base` | `base_driver` | Subscribes `/cmd_vel` | Differential drive motor simulator |
-| `rover_control` | `main_brain` | All sensor topics | Aggregates data, prints system report |
-| `rover_description` | — | — | URDF + RViz + Gazebo plugins |
+| Package | Purpose |
+|---|---|
+| `rover_sim` | Gazebo Harmonic 3D env, ROS-GZ Bridge, SLAM Toolbox, Nav2, Frontier Exploration |
+| `rover_description` | TF Broadcaster, physical and simulation URDF architecture definitions |
+| `rover_gps`, `lidar`, `camera` | Emulated sensor data processing nodes |
+| `rover_telemetry` | Emulated Battery & Temperature monitoring nodes |
+| `rover_base` | Hardware Differential Drive motor interface (`cmd_vel` interpreter) |
+| `rover_control` | Central status aggregating hub ("Master Brain") |
 
 ---
 
-## 🤖 URDF / Robot Model
+## 🌍 Autonomous Gazebo Harmonic Simulation
 
-The rover is defined in `rover.urdf` with:
+This project features a fully autonomous, self-driving SLAM simulation. The rover spawns into a 3D Gazebo Harmonic room and uses `slam_toolbox`, `nav2`, and a custom BFS-based Frontier Exploration node to systematically map the environment completely unsupervised.
 
-- **Chassis** — Blue box (0.5 × 0.3 × 0.1 m)
-- **4 Wheels** — Black cylinders, `continuous` joints (front_left, front_right, rear_left, rear_right)
-- **LiDAR** — Red cylinder on top of chassis
-- **GPS** — White box, rear of chassis
-- **Camera** — Black box, front of chassis, tilted down
-- **Temperature Sensor** — Small red box on chassis
-
-### Gazebo Plugins
-- `libgazebo_ros_diff_drive.so` — 4-wheel differential drive (`/cmd_vel` → `/odom`)
-- `libgazebo_ros_ray_sensor.so` — LiDAR ray sensor
-- `libgazebo_ros_camera.so` — Camera image publisher
-- `libgazebo_ros_gps_sensor.so` — GPS fix publisher
-
----
-
-## 🛠️ Prerequisites
+### 🛠️ Prerequisites
 
 ```bash
-# ROS2 Jazzy (Ubuntu 24.04 Noble)
-sudo apt install ros-jazzy-desktop
+# Core ROS2 Jazzy and Navigation Stack
+sudo apt install ros-jazzy-desktop ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-slam-toolbox
 
-# Required packages
-sudo apt install ros-jazzy-joint-state-publisher
-sudo apt install ros-jazzy-joint-state-publisher-gui   # optional GUI
-sudo apt install ros-jazzy-robot-state-publisher
+# Gazebo Harmonic (gz-sim) and ROS Bridges
+sudo apt install ros-jazzy-ros-gz ros-jazzy-ros-gz-bridge ros-jazzy-ros-gz-sim
+
+# TF and State Publishers
+sudo apt install ros-jazzy-joint-state-publisher ros-jazzy-robot-state-publisher
 ```
 
----
-
-## ⚙️ Build
+### ⚙️ Build
 
 ```bash
 cd ~/Documents/First_Robot/ros2_ws
-colcon build
+colcon build --symlink-install
 source install/setup.bash
 ```
 
----
+### 🚀 Running the Autonomous Simulation
 
-## 🚀 Running the Project
-
-### 1. Launch all sensor nodes + master brain
+To launch the 3D physics environment, SLAM mapping, and self-navigating AI in one unified command:
 
 ```bash
 cd ~/Documents/First_Robot/ros2_ws
 source install/setup.bash
-ros2 launch rover_control system_launch.py
+ros2 launch rover_sim simulation.launch.py
 ```
 
-**Expected output (every second):**
-```
-================ SYSTEM STATUS REPORT ================
-Timestamp: 15:30:45
-GPS Position: Lat: 37.7749, Lon: -122.4194
-Lidar Status: 180 points per scan
-Camera: Active (Last frame: 1234567890)
-Battery Level: 99.9%
-Temperature: 45.1C
-======================================================
-```
-
----
-
-### 2. Visualize the rover in RViz
-
-```bash
-cd ~/Documents/First_Robot/ros2_ws
-source install/setup.bash
-ros2 launch rover_description display.launch.py
-```
-
-Opens RViz with the full 3D rover model (chassis + 4 wheels + sensors).
-
----
-
-### 3. Run individual nodes
-
-```bash
-ros2 run rover_gps gps_node
-ros2 run rover_lidar lidar_node
-ros2 run rover_camera camera_node
-ros2 run rover_telemetry telemetry_node
-ros2 run rover_base base_driver
-ros2 run rover_control main_brain
-```
-
----
-
-### 4. Send velocity commands (test motor control)
-
-```bash
-# Drive forward
-ros2 topic pub /cmd_vel geometry_msgs/msg/Twist \
-  "{linear: {x: 0.5}, angular: {z: 0.0}}"
-
-# Turn in place
-ros2 topic pub /cmd_vel geometry_msgs/msg/Twist \
-  "{linear: {x: 0.0}, angular: {z: 1.0}}"
-```
-
----
-
-## 📡 ROS2 Topics
-
-| Topic | Type | Publisher |
-|---|---|---|
-| `/rover/gps/fix` | `sensor_msgs/NavSatFix` | `gps_node` |
-| `/rover/lidar/scan` | `sensor_msgs/LaserScan` | `lidar_node` |
-| `/rover/camera/image_raw` | `sensor_msgs/Image` | `camera_node` |
-| `/rover/battery` | `sensor_msgs/BatteryState` | `telemetry_node` |
-| `/rover/temperature` | `sensor_msgs/Temperature` | `telemetry_node` |
-| `/cmd_vel` | `geometry_msgs/Twist` | External / Navigation |
-| `/odom` | `nav_msgs/Odometry` | Gazebo diff_drive plugin |
-| `/robot_description` | `std_msgs/String` | `robot_state_publisher` |
-| `/joint_states` | `sensor_msgs/JointState` | `joint_state_publisher` |
+**What to Expect:**
+1. **Gazebo Harmonic:** Opens a window simulating the physical robot inside a cluttered 8x8 meter indoor room.
+2. **RViz2:** Visually tracks the real-time Occupancy Grid map being generated by the GPU Lidar.
+3. **Exploration Engine:** The rover will intelligently calculate frontiers (gaps between known and unknown space) and autonomously drive itself around the obstacles until the entire room is documented in a 2D map.
 
 ---
 
 ## 🔧 Technical Stack
 
-| Component | Technology |
+| Category | Technology |
 |---|---|
-| OS | Ubuntu 24.04 (Noble) |
-| ROS2 Distribution | Jazzy |
+| OS | Ubuntu 24.04 (Noble Numbat) |
+| Core Framework | ROS 2 Jazzy Jalisco |
 | Language | Python 3.12 |
-| Robot Description | URDF (XML) |
-| Visualizer | RViz2 |
-| Simulator | Gazebo (Classic) |
+| Autonomous Brain | Nav2 Stack + SLAM Toolbox Async |
+| Physics Engine | Gazebo Harmonic (`gz-sim8`) |
+| Robot Definition | URDF / SDF Integration |
 | Target Hardware | Raspberry Pi 5 |
 | Drive System | Differential Drive (4-wheel) |
 
 ---
 
-## 📝 Notes
+## 📝 Troubleshooting & Notes
 
-- Always run `source install/setup.bash` from **inside `ros2_ws/`** after building.
-- The sensor nodes simulate data — replace callbacks with real hardware drivers for physical deployment.
-- Gazebo plugins are configured in `rover.urdf` under `<gazebo>` tags and only activate in Gazebo simulation.
+- **Gazebo Time Jumps / TF Extrapolation Errors**: The `rover_sim` package explicitly uses heavy QoS tuning (`RELIABLE` for `/clock`, `BEST_EFFORT` for `/joint_states`) across the `ros_gz_bridge` to prevent Gazebo and ROS from desyncing in time.
+- **AMCL Disabled During SLAM**: During active mapping, `slam_toolbox` acts as the `map -> odom` localizer natively. AMCL is intentionally ripped out of the boot sequence in `nav2_params.yaml` to prevent TF tree conflicts.
+- Always run `source install/setup.bash` from **inside `ros2_ws/`** for every new terminal you open.
