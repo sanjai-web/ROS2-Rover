@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing rover_sim.egg-info/PKG-INFO
+writing dependency_links to rover_sim.egg-info/dependency_links.txt
+writing entry points to rover_sim.egg-info/entry_points.txt
+writing requirements to rover_sim.egg-info/requires.txt
+writing top-level names to rover_sim.egg-info/top_level.txt
+reading manifest file 'rover_sim.egg-info/SOURCES.txt'
+writing manifest file 'rover_sim.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_sim/lib/python3.12/site-packages/rover-sim.egg-link (link to .)
+Installing frontier_explorer script to /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_sim/lib/rover_sim
+
+Installed /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_sim
+running symlink_data

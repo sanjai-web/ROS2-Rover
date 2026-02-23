@@ -1,0 +1,17 @@
+[2.001s] Invoking command in '/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_sim': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/ros2_ws/install/rover_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_sim/build --no-deps symlink_data
+[2.646s] running develop
+[3.073s] running egg_info
+[3.113s] writing rover_sim.egg-info/PKG-INFO
+[3.114s] writing dependency_links to rover_sim.egg-info/dependency_links.txt
+[3.114s] writing entry points to rover_sim.egg-info/entry_points.txt
+[3.115s] writing requirements to rover_sim.egg-info/requires.txt
+[3.115s] writing top-level names to rover_sim.egg-info/top_level.txt
+[3.192s] reading manifest file 'rover_sim.egg-info/SOURCES.txt'
+[3.193s] writing manifest file 'rover_sim.egg-info/SOURCES.txt'
+[3.235s] running build_ext
+[3.235s] Creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_sim/lib/python3.12/site-packages/rover-sim.egg-link (link to .)
+[3.236s] Installing frontier_explorer script to /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_sim/lib/rover_sim
+[3.237s] 
+[3.237s] Installed /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_sim
+[3.237s] running symlink_data
+[3.305s] Invoked command in '/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_sim' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/ros2_ws/install/rover_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_sim/build --no-deps symlink_data

@@ -1,0 +1,15 @@
+[2.005s] Invoking command in '/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/build --no-deps symlink_data
+[2.654s] running develop
+[3.081s] running egg_info
+[3.122s] writing rover_description.egg-info/PKG-INFO
+[3.122s] writing dependency_links to rover_description.egg-info/dependency_links.txt
+[3.123s] writing requirements to rover_description.egg-info/requires.txt
+[3.123s] writing top-level names to rover_description.egg-info/top_level.txt
+[3.199s] reading manifest file 'rover_description.egg-info/SOURCES.txt'
+[3.200s] writing manifest file 'rover_description.egg-info/SOURCES.txt'
+[3.242s] running build_ext
+[3.242s] Creating /home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/lib/python3.12/site-packages/rover-description.egg-link (link to .)
+[3.243s] 
+[3.243s] Installed /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description
+[3.243s] running symlink_data
+[3.298s] Invoked command in '/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanjai/Documents/First_Robot/ros2_ws/install/rover_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sanjai/Documents/First_Robot/ros2_ws/build/rover_description/build --no-deps symlink_data
