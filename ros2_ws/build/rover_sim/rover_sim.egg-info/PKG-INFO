@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: rover-sim
+Version: 0.1.0
+Summary: Full ROS2 Jazzy + Gazebo Harmonic simulation with SLAM and Nav2
+Maintainer: rover
+Maintainer-email: rover@todo.todo
+License: Apache-2.0

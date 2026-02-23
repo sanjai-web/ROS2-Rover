@@ -1,0 +1,2 @@
+[console_scripts]
+frontier_explorer = rover_sim.frontier_explorer:main
